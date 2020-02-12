@@ -1,6 +1,8 @@
 package com.neuedu.controller;
 
+import com.neuedu.dao.UserMapper;
 import com.neuedu.pojo.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,6 +11,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class UserController {
+
+
+    UserMapper userMapper;
+
+    @RequestMapping("/mybatis")
+    public User findUser(){
+        User user = userMapper.selectByPrimaryKey(1);
+        return user;
+    }
+
     /*读取配置文件中的内容*/
     @Value("${user.username}")
     private String username;
