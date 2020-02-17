@@ -1,6 +1,8 @@
 package com.neuedu.dao;
 
 import com.neuedu.pojo.Category;
+import org.apache.ibatis.annotations.Param;
+
 import java.util.List;
 
 public interface CategoryMapper {
@@ -43,4 +45,9 @@ public interface CategoryMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(Category record);
+
+    /**
+     * 查询平级子类别
+     */
+    List<Category> getSubCategoryById(@Param("categoryId") Integer categoryId);
 }

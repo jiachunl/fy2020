@@ -1,3 +1,5 @@
+
+
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
@@ -14,3 +16,11 @@ spring:
 mybatis:
   mapper-locations: classpath*:com/neuedu/mapper/*Mapper.xml
   config-location: classpath:mybatis-config.xml
+
+user:
+  username: root
+server:
+  port: 8888
+
+upload:
+  path: E:\Ideacode\upload
