@@ -24,3 +24,18 @@ server:
 
 upload:
   path: E:\Ideacode\upload
+
+redis:
+  maxTotal: 8
+  maxIdle: 8
+  minIdle: 0
+  blockWhenExhausted: true
+  maxWaitMillis: 10000
+  testOnBorrow: true
+  testOnReturn: true
+  jmxEnabled: true
+  redisHost: 47.94.155.74
+  redisPort: 6379
+  redisPassword: Qinfo20180507
+  timeout: 1000
+  kvstore: kvstore

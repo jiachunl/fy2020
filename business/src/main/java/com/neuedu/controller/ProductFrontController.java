@@ -29,4 +29,9 @@ public class ProductFrontController {
                                @RequestParam(required = false,defaultValue = "")String orderBy){
         return productService.list(categoryId, keyword, pageNum, pageSize, orderBy);
     }
+
+    @RequestMapping("/detail.do")
+    public ServerResponse detail(Integer productId){
+        return productService.detail(productId);
+    }
 }
